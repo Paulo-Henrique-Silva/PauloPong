@@ -1,10 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameGum;
 using PauloPong.Core.GameObjects;
 using PauloPong.Library;
 using PauloPong.Library.GameObjects;
 using PauloPong.Library.Graphics;
 using PauloPong.Library.Scenes;
+using PauloPong_Core.Screens;
+using System;
 using System.Net;
 
 namespace PauloPong.Core.Scenes
@@ -20,12 +23,18 @@ namespace PauloPong.Core.Scenes
 
         private Ball _ball;
 
+        private int _score1;
+
+        private int _score2;
+
         //MainScene default attributes
         private const int DISTANCE_FROM_BOUND = 200;
         private const int PLAYER_HEIGHT = 100;
         private const int PLAYER_WIDTH = 25;
         private const int BALL_SIZE = 15;
         private const float PLAYER2_SPEED = 6.5f;
+
+        private MainGumScreen _screen;
 
         /*
          * TODO
@@ -49,6 +58,9 @@ namespace PauloPong.Core.Scenes
             base.Initialize();
 
             BaseGame.ExitOnEscape = true;
+
+            _screen = new MainGumScreen();
+            _screen.AddToRoot();
 
             //the Y coordinate of the screen center is half of the screen height minus half of the sprite height.
             float playerCenterOfTheScreen = BaseGame.GetYCenterRelativeToSprite(PLAYER_HEIGHT);

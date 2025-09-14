@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework.Media;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Media;
+using MonoGameGum;
 using PauloPong.Core.Scenes;
 using PauloPong.Library;
 
@@ -25,8 +27,22 @@ namespace PauloPong
             //At the end, the initialize execute LoadContent
             base.Initialize();
 
+            GumService.Default.Initialize(this, "GumProject/PongGumProject.gumx");
+
             //Audio.PlaySong(_themeSong);
             ChangeScene(new MainScene());
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+            GumService.Default.Update(gameTime);
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            base.Draw(gameTime);
+            GumService.Default.Draw();
         }
     }
 }
