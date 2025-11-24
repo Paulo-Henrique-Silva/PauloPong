@@ -4,6 +4,7 @@ using System.Linq;
 using MonoGameGum;
 using MonoGameGum.GueDeriving;
 using PauloPong_Core.Components.Controls;
+using PauloPong_Core.Components.Elements;
 using Gum.Converters;
 using Gum.DataTypes;
 using Gum.Managers;
@@ -38,9 +39,10 @@ partial class MainGumScreen : MonoGameGum.Forms.Controls.FrameworkElement
             return gue;
         });
     }
-    public StackPanel StackPanelInstance { get; protected set; }
-    public Label LabelScore1 { get; protected set; }
-    public ButtonStandard ButtonStandardInstance { get; protected set; }
+    public Label lblScore1 { get; protected set; }
+    public Label lblScore2 { get; protected set; }
+    public Panel PanelInstance { get; protected set; }
+    public DividerVerticalWhite DividerVerticalWhiteInstance { get; protected set; }
 
     public MainGumScreen(InteractiveGue visual) : base(visual)
     {
@@ -54,9 +56,10 @@ partial class MainGumScreen : MonoGameGum.Forms.Controls.FrameworkElement
     protected override void ReactToVisualChanged()
     {
         base.ReactToVisualChanged();
-        StackPanelInstance = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<StackPanel>(this.Visual,"StackPanelInstance");
-        LabelScore1 = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<Label>(this.Visual,"LabelScore1");
-        ButtonStandardInstance = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<ButtonStandard>(this.Visual,"ButtonStandardInstance");
+        lblScore1 = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<Label>(this.Visual,"lblScore1");
+        lblScore2 = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<Label>(this.Visual,"lblScore2");
+        PanelInstance = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<Panel>(this.Visual,"PanelInstance");
+        DividerVerticalWhiteInstance = global::MonoGameGum.Forms.GraphicalUiElementFormsExtensions.TryGetFrameworkElementByName<DividerVerticalWhite>(this.Visual,"DividerVerticalWhiteInstance");
         CustomInitialize();
     }
     //Not assigning variables because Object Instantiation Type is set to By Name rather than Fully In Code

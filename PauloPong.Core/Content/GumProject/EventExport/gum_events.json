@@ -2,165 +2,193 @@
   "UserEvents": {
     "325d8eea60b3081478a9195a828d9c4c6744756ff4c64180f28d327e7e38e2e0": [
       {
-        "NewName": "MainGumScreen",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 0,
-        "TimestampUtc": "2025-09-14T16:39:22.765315Z"
-      },
-      {
-        "NewName": "MainGumScreen.ButtonStandardInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T16:39:28.6494982Z"
-      },
-      {
-        "NewName": "MainGumScreen.ButtonStandardInstance1",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T16:39:38.084481Z"
-      },
-      {
-        "NewName": "MainGumScreen.StackPanelInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:12:37.1964287Z"
-      },
-      {
-        "NewName": "MainGumScreen.LabelInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:14:18.0022214Z"
-      },
-      {
         "NewName": null,
         "OldName": "MainGumScreen.Controls/ButtonStandard ButtonStandardInstance in MainGumScreen",
         "ElementType": "Screens",
         "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:14:40.696319Z"
+        "TimestampUtc": "2025-11-24T01:37:21.038453Z"
       },
       {
-        "NewName": null,
-        "OldName": "MainGumScreen.Controls/ButtonStandard ButtonStandardInstance1 in MainGumScreen",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:14:43.0390744Z"
-      },
-      {
-        "NewName": "MainGumScreen.LabelScore1",
-        "OldName": "MainGumScreen.LabelInstance",
+        "NewName": "MainGumScreen.lblScore1",
+        "OldName": "MainGumScreen.LabelScore1",
         "ElementType": "Screens",
         "EventType": 7,
-        "TimestampUtc": "2025-09-14T17:21:31.9171841Z"
+        "TimestampUtc": "2025-11-24T01:37:30.3940417Z"
       },
       {
-        "NewName": "MainGumScreen.LabelInstance",
+        "NewName": "MainGumScreen.lblScore2",
         "OldName": null,
         "ElementType": "Screens",
         "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:24:57.4339602Z"
+        "TimestampUtc": "2025-11-24T01:44:25.1538376Z"
+      },
+      {
+        "NewName": "MainGumScreen.PanelInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T21:06:24.841305Z"
       },
       {
         "NewName": null,
-        "OldName": "MainGumScreen.Controls/Label LabelInstance in MainGumScreen",
+        "OldName": "MainGumScreen.Controls/StackPanel StackPanelInstance in MainGumScreen",
         "ElementType": "Screens",
         "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:28:20.2133307Z"
+        "TimestampUtc": "2025-11-24T21:06:42.5498194Z"
       },
       {
-        "NewName": "MainGumScreen.ButtonStandardInstance",
+        "NewName": "MainGumScreen.SplitterStandardInstance",
         "OldName": null,
         "ElementType": "Screens",
         "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:28:27.6685414Z"
-      },
-      {
-        "NewName": "MainGumScreen.CheckBoxInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:29:11.0003269Z"
-      },
-      {
-        "NewName": "MainGumScreen.ComboBoxInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:34:45.1806503Z"
-      },
-      {
-        "NewName": "MainGumScreen.RadioButtonInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:38:32.7064362Z"
-      },
-      {
-        "NewName": "MainGumScreen.RadioButtonInstance1",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:38:35.1968494Z"
-      },
-      {
-        "NewName": "MainGumScreen.SliderInstance",
-        "OldName": null,
-        "ElementType": "Screens",
-        "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:39:46.0788436Z"
+        "TimestampUtc": "2025-11-24T21:17:00.7971539Z"
       },
       {
         "NewName": null,
-        "OldName": "MainGumScreen.Controls/Slider SliderInstance in MainGumScreen",
+        "OldName": "MainGumScreen.Controls/SplitterStandard SplitterStandardInstance in MainGumScreen",
         "ElementType": "Screens",
         "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:40:34.0632139Z"
+        "TimestampUtc": "2025-11-24T21:17:33.7207111Z"
       },
       {
-        "NewName": null,
-        "OldName": "MainGumScreen.Controls/ButtonStandard ButtonStandardInstance in MainGumScreen",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:40:37.5584716Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "MainGumScreen.Controls/CheckBox CheckBoxInstance in MainGumScreen",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:40:37.5584716Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "MainGumScreen.Controls/ComboBox ComboBoxInstance in MainGumScreen",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:40:37.574148Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "MainGumScreen.Controls/RadioButton RadioButtonInstance in MainGumScreen",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:40:37.574148Z"
-      },
-      {
-        "NewName": null,
-        "OldName": "MainGumScreen.Controls/RadioButton RadioButtonInstance1 in MainGumScreen",
-        "ElementType": "Screens",
-        "EventType": 6,
-        "TimestampUtc": "2025-09-14T17:40:37.5897726Z"
-      },
-      {
-        "NewName": "MainGumScreen.ButtonStandardInstance",
+        "NewName": "MainGumScreen.SplitterStandardInstance",
         "OldName": null,
         "ElementType": "Screens",
         "EventType": 5,
-        "TimestampUtc": "2025-09-14T17:46:46.2147737Z"
+        "TimestampUtc": "2025-11-24T21:17:36.6821987Z"
+      },
+      {
+        "NewName": "MainGumScreen.splitter",
+        "OldName": "MainGumScreen.SplitterStandardInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2025-11-24T21:21:51.9871722Z"
+      },
+      {
+        "NewName": "MainGumScreen.DividerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T21:27:38.4073391Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Controls/SplitterStandard splitter in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T21:50:29.140892Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Elements/Divider DividerInstance in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T21:50:32.2035072Z"
+      },
+      {
+        "NewName": "MainGumScreen.CautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T21:50:47.2773772Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Elements/CautionLines CautionLinesInstance in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T22:04:47.884334Z"
+      },
+      {
+        "NewName": "MainGumScreen.CautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T22:14:08.1196939Z"
+      },
+      {
+        "NewName": "MainGumScreen.DividerVerticalInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T22:27:30.9225869Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Elements/CautionLines CautionLinesInstance in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T22:27:44.4960142Z"
+      },
+      {
+        "NewName": "Elements/DividerCopy",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2025-11-24T22:35:33.3814135Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Elements/DividerVertical DividerVerticalInstance in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T22:36:11.1008882Z"
+      },
+      {
+        "NewName": "Elements/DividerVerticalWhite",
+        "OldName": "Elements/DividerCopy",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2025-11-24T22:38:18.5274482Z"
+      },
+      {
+        "NewName": "MainGumScreen.DividerVerticalWhiteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T22:39:45.9179073Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Elements/DividerVerticalWhite DividerVerticalWhiteInstance in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T22:40:55.2585351Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DividerVerticalWhite",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2025-11-24T22:41:04.0279331Z"
+      },
+      {
+        "NewName": "Elements/DividerVerticalWhite",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2025-11-24T22:41:20.0953223Z"
+      },
+      {
+        "NewName": "MainGumScreen.DividerVerticalWhiteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T22:41:36.0546825Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MainGumScreen.Elements/DividerVerticalWhite DividerVerticalWhiteInstance in MainGumScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2025-11-24T22:43:05.9211621Z"
+      },
+      {
+        "NewName": "MainGumScreen.DividerVerticalWhiteInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2025-11-24T22:43:14.3143253Z"
       }
     ]
   }

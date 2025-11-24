@@ -235,6 +235,11 @@
     <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
+    <Name>Elements/DividerVerticalWhite</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
     <Name>Elements/Icon</Name>
     <ElementType>Component</ElementType>
     <LinkType>ReferenceOriginal</LinkType>

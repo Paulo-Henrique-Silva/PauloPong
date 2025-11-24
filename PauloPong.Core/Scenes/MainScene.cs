@@ -23,9 +23,9 @@ namespace PauloPong.Core.Scenes
 
         private Ball _ball;
 
-        private int _score1;
+        private int _score1 = 0;
 
-        private int _score2;
+        private int _score2 = 0;
 
         //MainScene default attributes
         private const int DISTANCE_FROM_BOUND = 200;
@@ -38,7 +38,7 @@ namespace PauloPong.Core.Scenes
 
         /*
          * TODO
-         *  - Add a Score System and a straight vertical line in the middle of the field 
+         *  - Add a Score System and a straight vertical line in the middle of the field - OK
          *  - Do not set random direction every time the ball hits the horizontal walls. It Should bounce foward the opposite side of the last player who hit it.
          *  - Add a custom logic every time a ball hits the superior and bottom bounds of the player.
          *  - Add soundeffects.
@@ -59,6 +59,7 @@ namespace PauloPong.Core.Scenes
 
             BaseGame.ExitOnEscape = true;
 
+            //Initialize UI screen
             _screen = new MainGumScreen();
             _screen.AddToRoot();
 
@@ -82,6 +83,9 @@ namespace PauloPong.Core.Scenes
 
             CollisionChecks();
             ValidateGameOver();
+
+            _screen.lblScore1.Text = $"{_score1}";
+            _screen.lblScore2.Text = $"{_score2}";
 
             base.Update(gameTime);
         }
@@ -124,9 +128,17 @@ namespace PauloPong.Core.Scenes
         /// </summary>
         private void ValidateGameOver()
         {
-            if (_ball.Left <= BaseGame.ScreenBounds.Left || _ball.Right >= BaseGame.ScreenBounds.Right)
+            //Update Score.
+            if (_ball.Left <= BaseGame.ScreenBounds.Left)
             {
                 GameOver();
+                _score2++;
+            }
+
+            if (_ball.Right >= BaseGame.ScreenBounds.Right)
+            {
+                GameOver();
+                _score1++;
             }
         }
         

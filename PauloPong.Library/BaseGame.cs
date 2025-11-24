@@ -235,7 +235,7 @@ public class BaseGame : Game
     public static float GetXCenterRelativeToSprite(int spriteWidth) => (float)((ScreenWidth * 0.5) - (spriteWidth * 0.5));
 
     /// <summary>
-    /// The the position of the center of the screen relative to a sprite size.
+    /// The position of the center of the screen relative to a sprite size.
     /// </summary>
     /// <param name="spriteWidth"></param>
     /// <param name="spriteHeight"></param>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ComponentSave xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>Elements/DividerVertical</Name>
+  <Name>Elements/DividerVerticalWhite</Name>
   <BaseType>Container</BaseType>
   <State>
     <Name>Default</Name>
@@ -206,7 +206,7 @@
     <Variable>
       <Type>ColorCategory</Type>
       <Name>Line.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Gray</Value>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -266,13 +266,13 @@
     <Variable>
       <Type>float</Type>
       <Name>Line.Width</Name>
-      <Value xsi:type="xsd:float">1</Value>
+      <Value xsi:type="xsd:float">100</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>Line.WidthUnits</Name>
-      <Value xsi:type="xsd:int">0</Value>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
