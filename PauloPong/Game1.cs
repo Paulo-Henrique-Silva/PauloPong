@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Media;
 using MonoGameGum;
 using PauloPong.Core.Scenes;
 using PauloPong.Library;
@@ -8,8 +7,6 @@ namespace PauloPong
 {
     public class Game1 : BaseGame
     {
-        private Song _themeSong;
-
         public Game1() : base("Paulo's Pong", 1280, 720, false)
         {
 
@@ -17,7 +14,7 @@ namespace PauloPong
 
         protected override void LoadContent()
         {
-           // _themeSong = Content.Load<Song>("audios/theme");
+            //_themeSong = Content.Load<Song>("audios/theme-music");
 
             base.LoadContent();
         }
@@ -28,8 +25,6 @@ namespace PauloPong
             base.Initialize();
 
             GumService.Default.Initialize(this, "GumProject/PongGumProject.gumx");
-
-            //Audio.PlaySong(_themeSong);
             ChangeScene(new MainScene());
         }
 

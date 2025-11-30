@@ -21,22 +21,22 @@ namespace PauloPong.Library.GameObjects
         #region Object Position attributes
 
         /// <summary>
-        /// Returns Y coordiante of the player's position.
+        /// Returns Y coordiante of the object's position.
         /// </summary>
         public float Top => position.Y;
 
         /// <summary>
-        /// Returns X coordiante of the player's position.
+        /// Returns X coordiante of the object's position.
         /// </summary>
         public float Left => position.X;
 
         /// <summary>
-        /// Returns Y coordiante of the player's position plus the sprite height.
+        /// Returns Y coordiante of the object's position plus the sprite height.
         /// </summary>
         public float Bottom => position.Y + sprite.Height;
 
         /// <summary>
-        /// Returns X coordiante of the player's position plus the sprite width.
+        /// Returns X coordiante of the object's position plus the sprite width.
         /// </summary>
         public float Right => position.X + sprite.Width;
 

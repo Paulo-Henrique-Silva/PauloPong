@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameGum;
 using PauloPong.Core.GameObjects;
@@ -7,8 +8,6 @@ using PauloPong.Library.GameObjects;
 using PauloPong.Library.Graphics;
 using PauloPong.Library.Scenes;
 using PauloPong_Core.Screens;
-using System;
-using System.Net;
 
 namespace PauloPong.Core.Scenes
 {
@@ -36,21 +35,30 @@ namespace PauloPong.Core.Scenes
 
         private MainGumScreen _screen;
 
+        private SoundEffect _pingSoundEffect;
+        private SoundEffect _pongSoundEffect;
+        private SoundEffect _gameStartsEffect;
+
         /*
          * TODO
          *  - Add a Score System and a straight vertical line in the middle of the field - OK
-         *  - Do not set random direction every time the ball hits the horizontal walls. It Should bounce foward the opposite side of the last player who hit it.
-         *  - Add a custom logic every time a ball hits the superior and bottom bounds of the player.
-         *  - Add soundeffects.
+         *  - Do not set random direction every time the ball hits the horizontal walls. It Should bounce foward the opposite side of the last player who hit it. - OK
+         *  - Add a custom logic every time a ball hits the superior and bottom bounds of the player. - Ok
+         *  - Add soundeffects. - Ok
+         *  - Add a Custom Menu with GUM
          *  - Add PvP and PvC modes.
          *  - Add difficulty modes for PvC.
-         *  - Add a Custom Menu with GUM
          *  - Release.
          */
 
         public override void LoadContent()
         {
             base.LoadContent();
+
+            //Sounds
+            _pingSoundEffect = Content.Load<SoundEffect>("audios/ping-effect");
+            _pongSoundEffect = Content.Load<SoundEffect>("audios/pong-effect");
+            _gameStartsEffect = Content.Load<SoundEffect>("audios/game-starts-effect");
         }
 
         public override void Initialize()
@@ -62,7 +70,7 @@ namespace PauloPong.Core.Scenes
             //Initialize UI screen
             _screen = new MainGumScreen();
             _screen.AddToRoot();
-
+            
             //the Y coordinate of the screen center is half of the screen height minus half of the sprite height.
             float playerCenterOfTheScreen = BaseGame.GetYCenterRelativeToSprite(PLAYER_HEIGHT);
             Vector2 ballPosition = BaseGame.GetScreenCenterRelativeToSprite(BALL_SIZE, BALL_SIZE);
@@ -73,6 +81,13 @@ namespace PauloPong.Core.Scenes
             _player1 = new Player(playerSprite, new Vector2(DISTANCE_FROM_BOUND, playerCenterOfTheScreen));
             _player2 = new Player(playerSprite, new Vector2(BaseGame.ScreenWidth - DISTANCE_FROM_BOUND, playerCenterOfTheScreen));
             _ball = new Ball(ballSprite, ballPosition);
+
+            _ball.OnBallHitWalls += () => 
+            {
+                BaseGame.Audio.PlaySoundEffect(_pongSoundEffect);
+            };
+
+            BaseGame.Audio.PlaySoundEffect(_gameStartsEffect);
         }
 
         public override void Update(GameTime gameTime)
@@ -114,12 +129,16 @@ namespace PauloPong.Core.Scenes
 
             if (ballBounds.Intersects(player1Bounds))
             {
+                _ball.position.X = _player1.Right;
                 _ball.Bounce(Vector2Helper.Right, true);
+                BaseGame.Audio.PlaySoundEffect(_pingSoundEffect);
             }
 
             if (ballBounds.Intersects(player2Bounds))
             {
+                _ball.position.X = _player2.Left - _ball.sprite.Height;
                 _ball.Bounce(Vector2Helper.Left, true);
+                BaseGame.Audio.PlaySoundEffect(_pingSoundEffect);
             }
         }
 
@@ -154,6 +173,8 @@ namespace PauloPong.Core.Scenes
             _ball.position = BaseGame.GetScreenCenterRelativeToSprite(BALL_SIZE, BALL_SIZE);
 
             _ball.ResetBall();
+
+            BaseGame.Audio.PlaySoundEffect(_gameStartsEffect);
         }
 
         /// <summary>

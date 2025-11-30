@@ -15,6 +15,8 @@ namespace PauloPong.Core.GameObjects
 
         private Vector2 _direction = Vector2Helper.Left;
 
+        public Action OnBallHitWalls;
+
         public Ball(Sprite sprite, Vector2 position) : base(sprite, position)
         {
         }
@@ -77,14 +79,16 @@ namespace PauloPong.Core.GameObjects
             if (Top <= BaseGame.ScreenBounds.Top)
             {
                 position.Y = BaseGame.ScreenBounds.Top;
-                Bounce(new Vector2(0, 1), false);
+                Bounce(Vector2Helper.Down, false);
+                OnBallHitWalls?.Invoke();
             }
 
             //The real bottom position is Y + height of the sprite
             if (Bottom >= BaseGame.ScreenBounds.Bottom)
             {
                 position.Y = BaseGame.ScreenBounds.Bottom - sprite.Height;
-                Bounce(new Vector2(0, -1), false);
+                Bounce(Vector2Helper.Up, false);
+                OnBallHitWalls?.Invoke();
             }
         }
     }
