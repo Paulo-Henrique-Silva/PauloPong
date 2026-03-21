@@ -4,7 +4,7 @@ using PauloPong.Library.Graphics;
 namespace PauloPong.Library.GameObjects
 {
     /// <summary>
-    /// Base game object class to represent players, enimies, houses, constructions etc...
+    /// Base game object class to represent players, enemies, houses, constructions etc...
     /// </summary>
     public abstract class BaseGameObject
     {

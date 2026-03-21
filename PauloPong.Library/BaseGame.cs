@@ -49,6 +49,11 @@ public class BaseGame : Game
     public static bool ExitOnEscape { get; set; }
 
     /// <summary>
+    /// Exit the game immediately 
+    /// </summary>
+    private static bool _exitGameNow = false;
+
+    /// <summary>
     /// Gets Player Screen Width
     /// </summary>
     public static int ScreenWidth => GraphicsDevice.PresentationParameters.BackBufferWidth;
@@ -152,7 +157,7 @@ public class BaseGame : Game
 
         Audio.Update();
 
-        if (ExitOnEscape && Input.Keyboard.IsKeyDown(Keys.Escape))
+        if (ExitOnEscape && Input.Keyboard.IsKeyDown(Keys.Escape) || _exitGameNow)
         {
             Exit();
         }
@@ -183,6 +188,8 @@ public class BaseGame : Game
 
         base.Draw(gameTime);
     }
+
+    public static void ExitGame() => _exitGameNow = true;
 
     public static void ChangeScene(Scene next)
     {

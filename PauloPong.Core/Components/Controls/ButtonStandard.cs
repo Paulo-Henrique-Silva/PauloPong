@@ -1,11 +1,4 @@
-using Gum.Converters;
-using Gum.DataTypes;
-using Gum.Managers;
-using Gum.Wireframe;
-
-using RenderingLibrary.Graphics;
-
-using System.Linq;
+using Microsoft.Xna.Framework.Input;
 
 namespace PauloPong_Core.Components.Controls
 {
@@ -13,7 +6,7 @@ namespace PauloPong_Core.Components.Controls
     {
         partial void CustomInitialize()
         {
-        
+            Visual.HoverOver += (s, e) => Mouse.SetCursor(MouseCursor.Hand);
         }
     }
 }

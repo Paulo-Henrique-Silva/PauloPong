@@ -8,6 +8,7 @@ using PauloPong.Library.GameObjects;
 using PauloPong.Library.Graphics;
 using PauloPong.Library.Scenes;
 using PauloPong_Core.Screens;
+using RenderingLibrary.Graphics;
 
 namespace PauloPong.Core.Scenes
 {
@@ -26,6 +27,8 @@ namespace PauloPong.Core.Scenes
 
         private int _score2 = 0;
 
+        private bool _hasPlayer2 = false;
+
         //MainScene default attributes
         private const int DISTANCE_FROM_BOUND = 200;
         private const int PLAYER_HEIGHT = 100;
@@ -39,17 +42,10 @@ namespace PauloPong.Core.Scenes
         private SoundEffect _pongSoundEffect;
         private SoundEffect _gameStartsEffect;
 
-        /*
-         * TODO
-         *  - Add a Score System and a straight vertical line in the middle of the field - OK
-         *  - Do not set random direction every time the ball hits the horizontal walls. It Should bounce foward the opposite side of the last player who hit it. - OK
-         *  - Add a custom logic every time a ball hits the superior and bottom bounds of the player. - Ok
-         *  - Add soundeffects. - Ok
-         *  - Add a Custom Menu with GUM
-         *  - Add PvP and PvC modes.
-         *  - Add difficulty modes for PvC.
-         *  - Release.
-         */
+        public MainScene(bool hasPlayer2)
+        {
+            _hasPlayer2 = hasPlayer2;
+        }
 
         public override void LoadContent()
         {
@@ -65,9 +61,11 @@ namespace PauloPong.Core.Scenes
         {
             base.Initialize();
 
+
             BaseGame.ExitOnEscape = true;
 
             //Initialize UI screen
+            GumService.Default.Root.Children.Clear();
             _screen = new MainGumScreen();
             _screen.AddToRoot();
             
@@ -182,35 +180,61 @@ namespace PauloPong.Core.Scenes
         /// </summary>
         private void MovePlayer2(GameTime gameTime)
         {
-            float targetYPosition = _ball.position.Y - _player2.sprite.Height * 0.5f;
-
-            //Moves the player 2 fowards the ball based in a velocity.
-            if (targetYPosition < _player2.position.Y)
+            if (_hasPlayer2)
             {
-                //Avoid flickering by no reducing or adding more than needed.
-                if ((_player2.position.Y - targetYPosition) < PLAYER2_SPEED)
+                if (GameController.IsArrowUp())
                 {
-                    _player2.position.Y = targetYPosition;
+                    _player2.position.Y -= 11.0f;
                 }
-                else
+
+                if (GameController.IsArrowDown())
                 {
-                    _player2.position.Y -= PLAYER2_SPEED;
+                    _player2.position.Y += 11.0f;
+                }
+            }
+            else
+            {
+                float targetYPosition = _ball.position.Y - _player2.sprite.Height * 0.5f;
+
+                //Moves the player 2 fowards the ball based in a velocity.
+                if (targetYPosition < _player2.position.Y)
+                {
+                    //Avoid flickering by no reducing or adding more than needed.
+                    if ((_player2.position.Y - targetYPosition) < PLAYER2_SPEED)
+                    {
+                        _player2.position.Y = targetYPosition;
+                    }
+                    else
+                    {
+                        _player2.position.Y -= PLAYER2_SPEED;
+                    }
+                }
+
+                if (targetYPosition > _player2.position.Y)
+                {
+                    if ((_player2.position.Y + targetYPosition) > PLAYER2_SPEED)
+                    {
+                        _player2.position.Y = targetYPosition;
+                    }
+                    else
+                    {
+                        _player2.position.Y += PLAYER2_SPEED;
+                    }
+                }
+
+                //Bounds - Avoid Collision
+                if (_player2.Top <= BaseGame.ScreenBounds.Top)
+                {
+                    _player2.position.Y = BaseGame.ScreenBounds.Top;
+                }
+
+                //The real bottom position of the player is Y + height of the sprite
+                if (_player2.Bottom >= BaseGame.ScreenBounds.Bottom)
+                {
+                    _player2.position.Y = BaseGame.ScreenBounds.Bottom - _player2.sprite.Height;
                 }
             }
 
-            if (targetYPosition > _player2.position.Y)
-            {
-                if ((_player2.position.Y + targetYPosition) > PLAYER2_SPEED)
-                {
-                    _player2.position.Y = targetYPosition;
-                }
-                else
-                {
-                    _player2.position.Y += PLAYER2_SPEED;
-                }
-            }
-
-            //Bounds - Avoid Collision
             if (_player2.Top <= BaseGame.ScreenBounds.Top)
             {
                 _player2.position.Y = BaseGame.ScreenBounds.Top;

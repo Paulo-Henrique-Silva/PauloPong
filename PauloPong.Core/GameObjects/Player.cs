@@ -27,12 +27,12 @@ namespace PauloPong.Core.GameObjects
         /// </summary>
         private void MovePlayer()
         {
-            if (GameController.IsMoveUp())
+            if (GameController.IsWPressed())
             {
                 position.Y -= MOVEMENT_SPEED;
             }
 
-            if (GameController.IsMoveDown())
+            if (GameController.IsSPressed())
             {
                 position.Y += MOVEMENT_SPEED;
             }

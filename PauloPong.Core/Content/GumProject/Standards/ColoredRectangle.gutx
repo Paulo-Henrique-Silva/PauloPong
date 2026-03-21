@@ -433,21 +433,21 @@
       <Variable>
         <Type>int</Type>
         <Name>Blue</Name>
-        <Value xsi:type="xsd:int">177</Value>
+        <Value xsi:type="xsd:int">32</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>Green</Name>
-        <Value xsi:type="xsd:int">159</Value>
+        <Value xsi:type="xsd:int">32</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>int</Type>
         <Name>Red</Name>
-        <Value xsi:type="xsd:int">6</Value>
+        <Value xsi:type="xsd:int">32</Value>
         <Category>Rendering</Category>
         <SetsValue>true</SetsValue>
       </Variable>

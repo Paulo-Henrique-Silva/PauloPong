@@ -20,19 +20,33 @@ namespace PauloPong.Core
         /// <summary>
         /// Returns true if the player has triggered the "move up" action.
         /// </summary>
-        public static bool IsMoveUp()
+        public static bool IsWPressed()
         {
-            return Keyboard.IsKeyDown(Keys.Up) ||
-                   Keyboard.IsKeyDown(Keys.W);
+            return Keyboard.IsKeyDown(Keys.W);
+        }
+
+        /// <summary>
+        /// Returns true if the player has triggered the "move up" action with arrow.
+        /// </summary>
+        public static bool IsArrowUp()
+        {
+            return Keyboard.IsKeyDown(Keys.Up);
         }
 
         /// <summary>
         /// Returns true if the player has triggered the "move down" action.
         /// </summary>
-        public static bool IsMoveDown()
+        public static bool IsSPressed()
         {
-            return Keyboard.IsKeyDown(Keys.Down) ||
-                   Keyboard.IsKeyDown(Keys.S);
+            return Keyboard.IsKeyDown(Keys.S);
+        }
+
+        /// <summary>
+        /// Returns true if the player has triggered the "move down" action with arrow.
+        /// </summary>
+        public static bool IsArrowDown()
+        {
+            return Keyboard.IsKeyDown(Keys.Down);
         }
 
         /// <summary>

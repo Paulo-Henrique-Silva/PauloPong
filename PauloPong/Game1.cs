@@ -25,7 +25,7 @@ namespace PauloPong
             base.Initialize();
 
             GumService.Default.Initialize(this, "GumProject/PongGumProject.gumx");
-            ChangeScene(new MainScene());
+            ChangeScene(new PongMenuScene());
         }
 
         protected override void Update(GameTime gameTime)

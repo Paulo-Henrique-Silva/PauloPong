@@ -5,9 +5,15 @@
   <State>
     <Name>Default</Name>
     <Variable>
+      <Type>int</Type>
+      <Name>Background.Alpha</Name>
+      <Value xsi:type="xsd:int">255</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>Background.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Primary</Value>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -162,7 +168,20 @@
     <Variable>
       <Type>ColorCategory</Type>
       <Name>TextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">White</Value>
+      <Value xsi:type="xsd:string">DarkGray</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <IsFont>true</IsFont>
+      <Type>string</Type>
+      <Name>TextInstance.Font</Name>
+      <Value xsi:type="xsd:string">Segoe UI</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>TextInstance.FontSize</Name>
+      <Value xsi:type="xsd:int">21</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -222,7 +241,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Background.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -234,7 +253,41 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">DarkGray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -258,13 +311,66 @@
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <Category>States and Visibility</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Highlighted</Name>
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Background.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">PrimaryLight</Value>
+        <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -277,6 +383,19 @@
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <Category>States and Visibility</Category>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -285,7 +404,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Background.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">PrimaryDark</Value>
+        <Value xsi:type="xsd:string">DarkGray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -298,6 +417,41 @@
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <Category>States and Visibility</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -321,6 +475,41 @@
         <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <Category>States and Visibility</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Focused</Name>
@@ -342,6 +531,41 @@
         <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <Category>States and Visibility</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>DisabledFocused</Name>
@@ -361,6 +585,41 @@
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <Category>States and Visibility</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>Background.ExposeChildrenEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>TextInstance.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.HasEvents</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <Category>Behavior</Category>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
